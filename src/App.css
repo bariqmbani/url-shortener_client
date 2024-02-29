@@ -1,0 +1,150 @@
+html {
+  background-color: #2f4f4f;
+}
+
+body * {
+  font-family: "Anta", sans-serif !important;
+}
+
+.web-header h1 {
+  padding: 0;
+  margin-top: -40px;
+  user-select: none;
+}
+
+.web-header .uwu {
+  color: #ff9d74;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.web-header .ext {
+  color: #e0e0e0;
+  font-size: 3.1rem;
+  font-weight: 200;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.f-section {
+  margin: 10px 0;
+}
+
+.input-w-btn input,
+.input-w-btn button {
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.input-w-btn input {
+  width: 400px;
+  max-width: 400px;
+  border-radius: 3.1px 0 0 3.1px;
+  background: #e0e0e0;
+}
+
+.input-w-btn button {
+  width: 100px;
+  max-width: 100px;
+  height: 100%;
+  cursor: pointer;
+  background: #b2ffcc;
+  color: #5e5b52;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+}
+
+.input-w-btn button:hover,
+.input-w-btn button:focus,
+.input-w-btn input:focus + #shorten-submit-btn {
+  background: #ff6542;
+  color: #e0e0e0;
+}
+.input-w-btn button:focus {
+  outline: none;
+}
+
+.input-w-btn input:focus {
+  outline: none;
+}
+
+.input-w-btn {
+  outline: #b2ffcc 3px solid;
+  border-radius: 5px;
+  padding: 0;
+  margin-top: 10px;
+  min-width: 500px;
+}
+
+.input-w-btn.focused {
+  outline: 3px solid #ff6542;
+}
+
+@media (max-width: 600px) {
+  .input-w-btn {
+    min-width: 280px;
+  }
+  .input-w-btn input,
+  .input-w-btn button {
+    font-size: 0.8rem;
+  }
+  .input-w-btn input {
+    width: 210px;
+  }
+  .input-w-btn button {
+    width: 70px;
+  }
+  .web-header .uwu {
+    font-size: 3.5rem;
+  }
+  .web-header .ext {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 319px) {
+  .input-w-btn {
+    min-width: 200px;
+  }
+  .input-w-btn input,
+  .input-w-btn button {
+    font-size: 0.5rem;
+  }
+  .input-w-btn input {
+    width: 145px;
+  }
+  .input-w-btn button {
+    width: 55px;
+  }
+  .web-header .uwu {
+    font-size: 3rem;
+  }
+  .web-header .ext {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 230px) {
+  .input-w-btn {
+    width: 180px;
+  }
+  .input-w-btn input,
+  .input-w-btn button {
+    font-size: 0.4rem;
+  }
+  .input-w-btn input {
+    width: 130px;
+  }
+  .input-w-btn button {
+    width: 50px;
+  }
+}
