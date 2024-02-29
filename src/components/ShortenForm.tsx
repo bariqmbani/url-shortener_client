@@ -1,9 +1,11 @@
-import React, { createRef, useState } from "react";
+import React, { createRef, useContext, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import ShortenInput from "./ShortenInput";
+import { AppContext } from "../App";
 
 export default function ShortenForm() {
   const recaptchaRef = createRef<ReCAPTCHA>();
+  const context = useContext(AppContext);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -14,6 +16,9 @@ export default function ShortenForm() {
       url: urlInput.value,
       client: token,
     });
+    context.setData({ result: urlInput.value });
+    recaptchaRef.current?.reset();
+    form.reset();
   };
 
   const [isFocused, setIsFocused] = useState(false);

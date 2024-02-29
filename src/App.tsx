@@ -1,9 +1,27 @@
-import "./App.css";
+import { createContext, useState } from "react";
+
 import ShortenForm from "./components/ShortenForm";
+import ShortenResult from "./components/ShortenResult";
+
+import "./App.css";
+
+export type AppContextData = {
+  result?: string;
+};
+export type AppProvider = {
+  data: AppContextData;
+  setData: (data: AppContextData) => void;
+};
+export const AppContext = createContext<AppProvider>({
+  data: {},
+  setData: () => {},
+});
 
 export default function App() {
+  const [contextData, setContextData] = useState<AppContextData>({});
+
   return (
-    <>
+    <AppContext.Provider value={{ data: contextData, setData: setContextData }}>
       <main className="container">
         <div className="f-section web-header">
           <h1>
@@ -15,7 +33,11 @@ export default function App() {
         <div className="f-section shortener-form">
           <ShortenForm />
         </div>
+
+        <div className="f-section shortener-result">
+          <ShortenResult />
+        </div>
       </main>
-    </>
+    </AppContext.Provider>
   );
 }

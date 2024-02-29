@@ -25,8 +25,7 @@ body * {
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0;
+  margin-top: -60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,4 +146,18 @@ body * {
   .input-w-btn button {
     width: 50px;
   }
+}
+
+.icon-btn {
+  padding: 0;
+  color: #97bbff;
+  stroke: #97bbff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
 }
