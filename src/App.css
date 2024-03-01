@@ -8,7 +8,7 @@ body * {
 
 .web-header h1 {
   padding: 0;
-  margin-top: -40px;
+  margin-top: 250px;
   user-select: none;
 }
 
@@ -25,16 +25,24 @@ body * {
 }
 
 .container {
-  margin-top: -60px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex-col-center {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
 }
 
 .f-section {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .input-w-btn input,
@@ -80,8 +88,10 @@ body * {
   outline: #b2ffcc 3px solid;
   border-radius: 5px;
   padding: 0;
-  margin-top: 10px;
+  margin: 0 auto;
   min-width: 500px;
+  width: fit-content;
+  max-width: fit-content;
 }
 
 .input-w-btn.focused {
@@ -148,6 +158,10 @@ body * {
   }
 }
 
+.result {
+  margin-top: 20px;
+}
+
 .icon-btn {
   padding: 0;
   color: #97bbff;
@@ -159,5 +173,30 @@ body * {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.copy-info {
+  margin: 10px auto;
+  padding: 7px 10px;
+  width: fit-content;
+  border-radius: 5px;
+  background: #e0e0e0;
+  color: #5e5b52;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s;
 }
