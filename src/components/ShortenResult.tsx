@@ -23,11 +23,12 @@ export default function ShortenResult() {
   return (
     <>
       <div className="result">
-        <button className="icon-btn" onClick={copy}>
+        <button className="icon-btn tooltip" onClick={copy}>
           <span>{context.data?.result}</span>
           <span>
             <CopyIcon className="icon" size={20} />
           </span>
+          <span className="tooltip-text">click to copy</span>
         </button>
         {isCopied && <div className="copy-info fade-in">Link copied to clipboard.</div>}
       </div>
