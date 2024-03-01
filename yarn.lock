@@ -545,6 +545,11 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/node@18.18.2":
+  version "18.18.2"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.18.2.tgz#7abacb27a49afa8ea86873d81d7940ae098279eb"
+  integrity sha512-u1cis+7wLZMPI62EozwsqvgMZyauczyiqRRu/vcqZKI5N5yidrJHqOFxEg5seT8adc96Q6Yczg1c0DlqGtMJMw==
+
 "@types/prop-types@*":
   version "15.7.11"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.11.tgz#2596fb352ee96a1379c657734d4b913a613ad563"

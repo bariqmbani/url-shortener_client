@@ -177,15 +177,36 @@ body * {
   margin: 0 auto;
 }
 
-.copy-info {
+.info {
   margin: 10px auto;
   padding: 7px 10px;
   width: fit-content;
   border-radius: 5px;
-  background: #e0e0e0;
-  color: #5e5b52;
   font-size: 0.9rem;
   user-select: none;
+}
+
+.info.copy-info {
+  background: #e0e0e0;
+  color: #5e5b52;
+}
+
+.info.error-info {
+  position: relative;
+  background: #ff206e;
+  color: #e0e0e0;
+}
+
+.info.error-info:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ff206e;
 }
 
 @keyframes fade-in {
@@ -225,4 +246,11 @@ body * {
   top: 0;
   left: 100%;
   z-index: 1;
+}
+
+.error {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
 }

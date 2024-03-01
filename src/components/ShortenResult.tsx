@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import CopyIcon from "./icon/CopyIcon";
 import { AppContext } from "../App";
+import Info from "./Info";
 
 export default function ShortenResult() {
   const context = useContext(AppContext);
@@ -23,14 +24,19 @@ export default function ShortenResult() {
   return (
     <>
       <div className="result">
-        <button className="icon-btn tooltip" onClick={copy}>
-          <span>{context.data?.result}</span>
-          <span>
-            <CopyIcon className="icon" size={20} />
-          </span>
-          <span className="tooltip-text">click to copy</span>
-        </button>
-        {isCopied && <div className="copy-info fade-in">Link copied to clipboard.</div>}
+        {context.data.result.startsWith("http") ? (
+          <button className="icon-btn tooltip" onClick={copy}>
+            <span>{context.data?.result}</span>
+            <span>
+              <CopyIcon className="icon" size={20} />
+            </span>
+            <span className="tooltip-text">click to copy</span>
+          </button>
+        ) : (
+          <div className="error">error: {context.data.result}</div>
+        )}
+
+        {isCopied && <Info type="copy" text="Link copied to clipboard." />}
       </div>
     </>
   );

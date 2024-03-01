@@ -1,0 +1,41 @@
+.loading-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: none;
+  overflow: hidden;
+}
+
+.loading-bar::after {
+  content: "";
+  height: 100%;
+  width: 0%;
+  background-color: #b2ffcc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loading-bar 1s forwards, shine 1s infinite ease-in-out 2s forwards;
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-color: #b2ffcc;
+  }
+  50% {
+    background-color: #e0ff8b;
+  }
+  100% {
+    background-color: #b2ffcc;
+  }
+}
